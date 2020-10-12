@@ -1,0 +1,101 @@
+.set-header-bg-2dashboard-log(){
+    #dashboard-left-sidebar{
+        & > div.dashboard-logo{
+            background-color: @dashboard-navbar-bg-color;
+        }
+    }
+}
+
+.import-dashboard-navbar-component(){
+
+    &[minimized-header='false'][full-screen='false'][hide-sidebar = 'true']{
+        div.dashboard-navbar{
+            left: 5px;
+            width: calc(100% - 10px);
+        }
+    }
+
+
+    &[minimized-header='false'][full-screen='true']{
+        div.dashboard-navbar{
+            top: 0px;
+            left: 250px;
+            width: calc(100% - 250px);
+        }
+        &[hide-sidebar = 'true']{
+            div.dashboard-navbar{
+                left: 0px;
+                width: 100%;
+            }
+        }
+    }
+
+    &[minimized-header='true']{
+        div.dashboard-navbar{
+            position: fixed;
+            width: 60px;
+            text-align: center;
+            padding-top: 10px;
+            border-bottom-width: 0px;
+            & > i.fa{
+                float: none;
+                margin: auto;
+                position: fixed;
+                top: calc(100% - 35px);
+                left: 22px;
+            }
+            & > .global-search{
+                display: none;
+            }
+    
+            & > div.mini-global-search{
+                display: unset;
+                color: @dashboard-navbar-link-color;
+            }
+        }
+        &[full-screen='true']{
+            div.dashboard-navbar{
+                height: 100%;
+                left: 0px;
+                top: 0px;
+            }
+        }
+        
+        &[full-screen='false']{
+            div.dashboard-navbar{
+                height: calc(100% - 10px);
+                left: 5px;
+                top: 5px;
+                
+                & > i.fa{
+                    left: 27px;
+                }
+            }
+        }
+    }
+
+    div.dashboard-navbar{
+        background-color: @dashboard-navbar-bg-color;
+        border-bottom-color: @dashboard-navbar-border-color;
+
+        & > i:first-child{
+            color: @dashboard-navbar-minimalizer-icon-color;
+        }
+
+        form.global-search{
+            & > .btn{
+                color: @dashboard-global-search-icon-color;
+            }
+        }
+
+        & > div.dashboard-navbar-menu{
+            ul{
+                & > li{
+                    & > a{
+                        color: @dashboard-navbar-link-color;
+                    }
+                }
+            }
+        }
+    }
+}

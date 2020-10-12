@@ -1,0 +1,33 @@
+.purple-theme-common-color(){
+    @theme-color: #a27ce6;
+    @font-color:  #17191c;
+    @link-font-color: @font-color; 
+    @dashboard-body-bg-color: @theme-color;
+}
+.import-purple-theme(){
+    .purple-theme-common-color();
+    @dashboard-body-container-color: #fff;
+    @dashboard-global-search-icon-color: #999;
+
+    .dashboard-left-sidebar(#fff, #f4f7f6, @dashboard-body-bg-color, #b5b5b5, rgb(241, 241, 241), @dashboard-body-bg-color, #777, #999);
+    .dashboard-user-account(rgb(223, 222, 222), rgb(90, 90, 90));
+    .dashboard-navbar(#fff, rgb(238, 238, 238), #dee2e6, #666, black); 
+    .dashboard-navtab(#666, @dashboard-body-bg-color);
+    .dashboard-main-content(#f4f7f6, rgb(238, 238, 238));
+    //Common-UI
+    .cui-dropdown(@theme-color, @theme-color,#fff, #fff, #999, @font-color);
+    .cui-table(#fff, @font-color, @theme-color, #fff, @theme-color, #fff,black, black, @theme-color, #fff, @theme-color);
+}
+.import-effect-on-left-sidebar(){
+    .purple-theme-common-color();
+    @font-color: #fff; 
+    @link-font-color: @font-color; 
+    .dashboard-navtab(@font-color, @font-color);
+    .dashboard-user-account(rgb(223, 222, 222), @font-color);
+    .dashboard-left-sidebar(@dashboard-body-bg-color, @dashboard-body-bg-color, @font-color, @font-color, #CCD1D9, @dashboard-body-bg-color, @font-color, @font-color);
+}
+.import-effect-on-header(){
+    .purple-theme-common-color();
+    @font-color: #fff; 
+    .dashboard-navbar(@dashboard-body-bg-color, rgb(238, 238, 238), #dee2e6, @font-color, @font-color); 
+}

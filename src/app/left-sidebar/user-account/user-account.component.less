@@ -1,0 +1,28 @@
+div.user-account
+{
+    & > img {
+        width: 50px;
+        vertical-align: top;
+        border-radius: 50%!important;
+        margin-right: 10px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    & > div.dropdown
+    {
+        text-align: left;
+        margin-top: 5px;
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+        & > a.user-name{
+            display: block;
+            color: inherit;
+            & > strong {
+                font-weight: bolder;
+                color: inherit;
+            }
+        }
+    }
+}

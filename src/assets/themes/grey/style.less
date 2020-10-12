@@ -1,0 +1,31 @@
+.grey-theme-common-color(){
+    @theme-color: rgb(247, 247, 247);
+    @font-color:  #17191c;
+    @link-font-color: @font-color; 
+    @dashboard-body-bg-color: @theme-color;
+}
+.import-grey-theme(){
+    .grey-theme-common-color();
+    @dashboard-body-container-color: #fff;
+    @dashboard-global-search-icon-color: #999;
+    
+    .dashboard-left-sidebar(#fff, #f4f7f6, @dashboard-body-bg-color, #b5b5b5, rgb(241, 241, 241), @dashboard-body-bg-color, #777, #999);
+    .dashboard-user-account(rgb(223, 222, 222), rgb(90, 90, 90));
+    .dashboard-navbar(#fff, rgb(238, 238, 238), #dee2e6, #666, black); 
+    .dashboard-navtab(@font-color, #666);
+    .dashboard-main-content(rgb(247, 247, 247), rgb(238, 238, 238));
+    //Common-UI
+    .cui-dropdown(@theme-color, @theme-color,#fff, #fff, #999, @font-color);
+    .cui-table(#fff, @font-color, @theme-color, @font-color, @theme-color, #fff,black, black, @theme-color, black, #dee2e6);
+}
+.import-effect-on-left-sidebar(){
+    .grey-theme-common-color();
+    @link-font-color: @font-color; 
+    .dashboard-navtab(@font-color, @font-color);
+    .dashboard-user-account(rgb(223, 222, 222), @font-color);
+    .dashboard-left-sidebar(@dashboard-body-bg-color, @dashboard-body-bg-color, @font-color, @font-color, #CCD1D9, @dashboard-body-bg-color, @font-color, @font-color);
+}
+.import-effect-on-header(){
+    .grey-theme-common-color();
+    .dashboard-navbar(@dashboard-body-bg-color, rgb(238, 238, 238), #dee2e6, @font-color, @font-color); 
+}

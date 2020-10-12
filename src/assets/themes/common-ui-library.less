@@ -1,0 +1,75 @@
+.import-cui-table-component(){
+    .cui-table-component{
+        background-color: @cui-table-bg-color;
+        color: @cui-table-color;
+    }
+    .cui-table-buttons-color{
+        background-color: @cui-table-buttons-bg-color;
+        border-color: @cui-table-buttons-border-color;
+        color: @cui-table-buttons-color;
+    }
+    .cui-table-header{
+        background-color: @cui-table-header-bg-color;
+        color: @cui-table-header-color;
+    }
+
+    ul.pagination{
+        li.page-item{
+            a.page-link{
+                color: @cui-table-pagination-color !important;
+            }
+
+            &.active{
+                a.page-link{
+                    background-color: @cui-table-pagination-active-bg-color !important;
+                    border-color: @cui-table-pagination-active-border-color !important;
+                    color: @cui-table-pagination-active-color !important;
+                }
+            }
+        }
+    }
+}
+
+.import-cui-dropdown(){
+    div.cui-dropdown{
+        & > button.cui-dropdown-btn{
+            background-color: @common-ui-dropdown-btn-bg-color;
+            border-color: @common-ui-dropdown-btn-border-color;
+            color: @common-ui-dropdown-btn-color;
+        }
+    }
+
+    div.tooltipster-sidetip.cui-customized {
+        background-color: none;
+        & > div.tooltipster-box {
+            background-color: @common-ui-dropdown-bg-color;
+            border: 1px solid @common-ui-dropdown-border-color;
+            border-radius: 4px;
+        }
+        
+        & > div.tooltipster-content {
+            color:  @common-ui-dropdown-color;
+        }
+        
+        & > div.tooltipster-arrow{
+            margin-left: -10px;
+            & > div.tooltipster-arrow-uncropped{
+                div.tooltipster-arrow-background{
+                    top: 2px;
+                    border-width: 9px;
+                    border-bottom-color: @common-ui-dropdown-bg-color;
+                }
+                
+                div.tooltipster-arrow-border{
+                    border-width: 9px;
+                    border-bottom-color: @common-ui-dropdown-border-color;
+                }
+            }
+        }
+    }
+}
+
+.import-common-ui-theme(){
+    .import-cui-dropdown(); 
+    .import-cui-table-component();
+}

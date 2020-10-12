@@ -1,0 +1,36 @@
+<div id="menu-pane">
+    <ul>                            
+        <li>
+            <a (click) = "toggleSubMenus($event)"><i class="fa fa-home"></i><span>Dashboard</span><i class="fa fa-angle-left"></i></a>
+            <ul class="collapse">
+                <li><i class="fa fa-minus"></i><a href="#">All Tasks</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">My Tasks</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">Adhoc Report</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">Customize Report</a></li>                                    
+            </ul>
+        </li>
+        <li>
+            <a (click) = "toggleSubMenus($event)"><i class="fa fa-building"></i><span>Record</span><i class="fa fa-angle-left"></i></a>
+            <ul class="collapse">
+                <li><i class="fa fa-minus"></i><a href="#">All Records</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">Building</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">License</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">Work Order</a></li>                                    
+            </ul>
+        </li>
+        <li>
+            <a (click) = "toggleSubMenus($event)"><i class="fa fa-address-card-o"></i><span>Contact</span><i class="fa fa-angle-left"></i></a>
+            <ul class="collapse">
+                <li><i class="fa fa-minus"></i><a href="#">License Professional</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">Contact</a></li>                                    
+            </ul>
+        </li>
+        <li>
+            <a (click) = "toggleSubMenus($event)"><i class="fa fa-location-arrow"></i><span>Location</span><i class="fa fa-angle-left"></i></a>
+            <ul class="collapse">
+                <li><i class="fa fa-minus"></i><a href="#">Address</a></li>                                    
+                <li><i class="fa fa-minus"></i><a href="#">Parcel</a></li>                                    
+            </ul>
+        </li>
+    </ul>
+</div>

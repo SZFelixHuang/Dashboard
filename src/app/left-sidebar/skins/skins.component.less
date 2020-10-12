@@ -1,0 +1,77 @@
+@skinSet: {
+    theme-purple: #a27ce6;
+    theme-blue: rgb(62, 172, 255);
+    theme-cyan: #49c5b6;
+    theme-green: rgb(80, 211, 138);
+    theme-orange: rgb(255, 206, 75);
+    theme-blush: rgb(228, 114, 151);
+    theme-grey: rgb(247, 247, 247);
+}
+.ul_fn(){
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+.li_fn(){
+    display: block;
+    flex-direction: column;
+    margin-bottom: 4px;
+    text-align:left;
+    height: 28px;
+}
+.span_fn(){
+    margin-left: 10px;
+    line-height: 22px;
+    font-size:14px;
+    font-weight:400;
+}
+
+#theme-skins {
+    padding: 15px 15px 0px 15px;
+    & > ul {
+        .ul_fn();
+        & > li {
+            .li_fn();
+            & > div.skin{
+                height: 22px;
+                width: 22px;
+                border-radius: 22px;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 400;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    color: #fff;
+                    top: 4px;
+                    left: 4px;
+                }
+                each(@skinSet, {
+                    &.@{key}{
+                        background-color: @value;
+                    }
+                });
+            }
+            & > span{
+               .span_fn();
+            }
+        }
+    }
+}
+
+#skin-settings {
+    padding: 0px 15px 15px 15px;
+    & > ul {
+        .ul_fn();
+        & > li {
+            .li_fn();
+            & > div{
+                display: inline-block;
+            }
+            & > span{
+                .span_fn();
+            }
+        }
+    }
+}

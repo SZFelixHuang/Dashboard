@@ -1,0 +1,61 @@
+.import-dashboard-main-content(){
+    #dashboard-main-content{
+        background-color: @dashboard-main-content-bg-color;
+        border-left-color: @dashboard-main-content-border-color;
+        border-left-width: 1px;
+        border-left-style: solid;
+    }
+
+    &[minimized-header='false'][full-screen='false'][hide-sidebar = 'true']{
+        #dashboard-main-content{
+            left: 5px;
+            width: calc(100% - 10px);
+        }
+    }
+
+    &[minimized-header='false'][full-screen='true']{
+        #dashboard-main-content{
+            top: 60px;
+            left: 250px;
+            width: calc(100% - 250px);
+            height: calc(100% - 60px);
+        }
+        &[hide-sidebar = 'true']{
+            #dashboard-main-content{
+                left: 0px;
+                width: 100%;
+            }
+        }
+    }
+
+    &[minimized-header='true']{
+        &[full-screen='true']{
+            #dashboard-main-content{
+                top: 0px;
+                left: 310px;
+                width: calc(100% - 310px);
+                height: 100%;
+            }
+            &[hide-sidebar = 'true']{
+                #dashboard-main-content{
+                    left: 60px;
+                    width: calc(100% - 60px);
+                }
+            }
+        }
+        &[full-screen='false']{
+            #dashboard-main-content{
+                top: 5px;
+                left: 315px;
+                width: calc(100% - 320px);
+                height: calc(100% - 10px);
+            }
+            &[hide-sidebar = 'true']{
+                #dashboard-main-content{
+                    left: 60px;
+                    width: calc(100% - 70px);
+                }
+            }
+        }
+    }
+}

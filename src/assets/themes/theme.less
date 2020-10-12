@@ -1,0 +1,93 @@
+@import './baseStyle.less';
+
+.import-dashoard-components(){
+    @import './dashboard-body.less';
+    @import './dashboard-navbar-component.less';
+    @import './dashboard-main-content.less';
+    .import-dashbaord-body();
+    .import-dashboard-navbar-component();
+    .import-dashboard-main-content();
+}
+
+.import-dashoard-left-sider-component(){
+    @import './dashboard-left-sidebar.less';
+    .import-dashboard-left-sidebar();
+}
+
+.import-dashbord-theme(){
+    @import './common-ui-library.less';
+    .import-common-ui-theme();
+    .import-dashoard-components();
+    .import-dashoard-left-sider-component();
+    &[effect-on-sidebar='true']
+    {    
+        .import-effect-on-left-sidebar();
+        .import-dashoard-components();
+        .import-dashoard-left-sider-component();
+        &[effect-on-header='true']
+        {
+            .import-effect-on-left-sidebar();
+            .import-effect-on-header();
+            .import-dashoard-components();
+            .import-dashoard-left-sider-component();
+        }
+    }
+    &[effect-on-sidebar='false'][effect-on-header='true']
+    {
+        .import-effect-on-header();
+        .import-dashoard-components();
+        &[minimized-header='false']
+        {
+            .set-header-bg-2dashboard-log();
+        }
+    }
+}
+
+body[theme-skin='purple']
+{
+    @import './purple/style.less';
+    .import-purple-theme();
+    .import-dashbord-theme();
+}
+
+body[theme-skin='cyan']
+{
+    @import './cyan/style.less';
+    .import-cyan-theme();
+    .import-dashbord-theme();
+}
+
+body[theme-skin='blue']
+{
+    @import './blue/style.less';
+    .import-blue-theme();
+    .import-dashbord-theme();
+}
+
+body[theme-skin='green']
+{
+    @import './green/style.less';
+    .import-green-theme();
+    .import-dashbord-theme();
+}
+
+body[theme-skin='orange']
+{
+    @import './orange/style.less';
+    .import-orange-theme();
+    .import-dashbord-theme();
+}
+
+body[theme-skin='blush']
+{
+    @import './blush/style.less';
+    .import-blush-theme();
+    .import-dashbord-theme();
+}
+
+body[theme-skin='grey']
+{
+    @import './grey/style.less';
+    .import-grey-theme();
+    .import-dashbord-theme();
+}

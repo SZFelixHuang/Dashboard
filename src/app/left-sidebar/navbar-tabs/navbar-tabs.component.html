@@ -1,0 +1,16 @@
+<ul id="nav-tabs" class="nav-tabs">
+    <li id="menus" class="nav-item" (click) = "toggleTab($event)"><a class="nav-link">Menu</a></li>
+    <li id="reports" class="nav-item"  (click) = "toggleTab($event)"><a class="nav-link"><i class="fa fa-line-chart"></i></a></li>
+    <li id="settings" class="nav-item" (click) = "toggleTab($event)"><a class="nav-link"><i class="fa fa-cog"></i></a></li>
+    <li id="quetions" class="nav-item" (click) = "toggleTab($event)"><a class="nav-link"><i class="fa fa-question-circle-o"></i></a></li>                
+</ul>
+<div id="dashboard-menus" class = "nav-tab-content" style="display: none;">
+    <dashboard-menus></dashboard-menus>
+</div>
+<div id="dashboard-reports" class = "nav-tab-content" style="display: none;">
+</div>
+<div id="dashboard-settings" class = "nav-tab-content" style="display: none;">
+    <dashboard-settings></dashboard-settings>
+</div>
+<div id="dashboard-quetions" class = "nav-tab-content" style="display: none;">
+</div>

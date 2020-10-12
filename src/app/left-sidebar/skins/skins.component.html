@@ -1,0 +1,76 @@
+<div id= "theme-skins">
+    <h6>Choose Skin</h6>
+    <ul>
+        <li theme="purple" (click) = "chooseSkin($event)">
+            <div class="skin theme-purple"></div>
+            <span>Purple</span>
+        </li>                   
+        <li theme="blue" (click) = "chooseSkin($event)">
+            <div class="skin theme-blue"></div>
+            <span>Blue</span>
+        </li>
+        <li theme="cyan" (click) = "chooseSkin($event)">
+            <div class="skin theme-cyan"></div>
+            <span>Cyan</span>
+        </li>
+        <li theme="green" (click) = "chooseSkin($event)">
+            <div class="skin theme-green"></div>
+            <span>Green</span>
+        </li>
+        <li theme="orange" (click) = "chooseSkin($event)">
+            <div class="skin theme-orange"></div>
+            <span>Orange</span>
+        </li>
+        <li theme="blush" (click) = "chooseSkin($event)">
+            <div class="skin theme-blush"></div>
+            <span>Blush</span>
+        </li>
+        <li theme="grey" (click) = "chooseSkin($event)">
+            <div class="skin theme-grey"></div>
+            <span>Grey</span>
+        </li>
+    </ul>
+</div>
+<div id="skin-settings">
+    <h6>Skin Settings</h6>
+    <ul>
+        <li>
+            <div class="ckbx-style-13">
+                <cui-switch size = "mini" onColor="info" offColor="danger" [state] = "isHideDashboardLogo" (switchChange) = "hideDashboardLogo($event)"></cui-switch>
+            </div>
+            <span>Hide Logo</span>
+        </li>
+        <li>
+            <div class="ckbx-style-13">
+                <cui-switch size = "mini" onColor="info" offColor="danger" [state] = "isFullScreen" (switchChange) = "fullScreen($event)"></cui-switch>
+            </div>
+            <span>Full Screen</span>
+        </li>
+        <li>
+            <div class="ckbx-style-13">
+                <cui-switch size = "mini" onColor="info" offColor="danger" [state] = "isNightMode" (switchChange) = "nightMode($event)"></cui-switch>
+            </div>
+            <span>Night Mode</span>
+        </li>
+        <li>
+            <div class="ckbx-style-13">
+                <cui-switch size = "mini" onColor="info" offColor="danger" [state] = "isEffectOnLeftSidebar" (switchChange) = "effectOnSidebar($event)"></cui-switch>
+            </div>
+            <span>Effect On Left Sidebar</span>
+        </li>
+        <li>
+            <div class="ckbx-style-13">
+                <cui-switch size = "mini" onColor="info" offColor="danger" [state] = "isEffectOnHeader" (switchChange) = "effectOnHeader($event)"></cui-switch>
+                <!-- <input type="checkbox" id="effect-on-header" [checked] = "isEffectOnHeader" (change) = "effectOnHeader($event)">
+                <label for="effect-on-header"></label> -->
+            </div>
+            <span>Effect On Header</span>
+        </li>
+        <li>
+            <div class="ckbx-style-13">
+                <cui-switch size = "mini" onColor="info" offColor="danger" [state] = "isMinimizedHeader" (switchChange) = "setMiniziedHeader($event)"></cui-switch>
+            </div>
+            <span>Minimize Header</span>
+        </li>
+    </ul>
+</div>

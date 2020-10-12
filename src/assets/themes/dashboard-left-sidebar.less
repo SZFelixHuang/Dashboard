@@ -1,0 +1,142 @@
+.import-dashboard-left-sidebar(){
+
+    &[hide-sidebar = 'true']{
+        #dashboard-left-sidebar{
+            display: none;
+        }
+    }
+    &[hide-sidebar = 'false']{
+        #dashboard-left-sidebar{
+            display: unset;
+        }
+    }
+
+    &[full-screen='true']{
+        #dashboard-left-sidebar{
+            height: 100%;
+            left: 0px;
+            top: 0px;
+
+            div.nav-tab-content{
+                max-height: calc(100% - 270px) ;
+            }
+        }
+    }
+
+    &[minimized-header='true']{
+       #dashboard-left-sidebar{
+            border-left-color: @dashboard-main-content-border-color;
+            border-left-width: 1px;
+            border-left-style: solid;
+            left: 65px;
+            & > div.dashboard-logo{
+                background-color: @dashboard-left-sidebar-bg-color;
+            }
+       }
+
+       &[full-screen='true']{
+            #dashboard-left-sidebar{
+                left: 60px;
+            }
+        }
+    }
+
+    &[hide-dashboard-logo='true']
+    {
+        #dashboard-left-sidebar {
+            div.nav-tab-content{
+                max-height: calc(100% - 210px) ;
+            }
+
+            & > div.dashboard-logo{
+                display: none;
+            }
+        }
+    }
+    
+    #dashboard-left-sidebar{
+        background-color: @dashboard-left-sidebar-bg-color;
+        color: @font-color;
+        
+        & > div.dashboard-logo
+        {
+            background-color: @dashboard-left-sidebar-logo-bg-color;  
+            border-bottom-color: @dashboard-navbar-border-color;      
+        }
+        
+        div.user-account{
+            color: @dashboard-user-account-font-color;
+            & > img {
+                border-color: @dashboard-user-account-img-color;
+            }
+        }
+        
+        #nav-tabs {
+            border-bottom-color: @dashboard-navbar-tabs-border-color;
+            
+            & > li.nav-item {
+                
+                & > a.nav-link{
+                    color: @dashboard-navtab-link-color;
+                }
+                
+                & > a.nav-link.active{
+                    border-color: @dashboard-navbar-tabs-border-color @dashboard-navbar-tabs-border-color @dashboard-left-sidebar-bg-color;
+                    color: @dashboard-navtab-link-active-color;
+                }
+            }
+        }
+        
+        #menu-pane {
+            & > ul {
+                & > li {
+                    border-left-color: transparent;
+                    
+                    &.active{
+                        border-left-color: @dashboard-left-sidebar-menu-active-border-color;
+                        & > a{
+                            background-color: @dashboard-left-sidebar-menu-active-bg-color;
+                        }
+                    }
+                    
+                    & > a {
+                        & > i.fa {
+                            color: @dashboard-left-sidebar-menu-color;
+                        }
+                        & > i.fa.fa-angle-left{
+                            color: @dashboard-left-sidebar-menu-angle-color;
+                        }
+                    }
+                    
+                    &:hover{
+                        background-color: @dashboard-left-sidebar-menu-active-bg-color;
+                        border-left-color: @dashboard-left-sidebar-menu-active-border-color;
+                        & > ul {
+                            background-color: @dashboard-left-sidebar-bg-color;
+                        }
+                    }
+                    
+                    & > ul{
+                        &:hover{
+                            background-color: @dashboard-left-sidebar-bg-color;
+                        }
+                        
+                        & > li{
+                            & > i.fa{
+                                color: @dashboard-left-sidebar-submenuIcon-color;
+                            }     
+                            
+                            & > a{
+                                color: @dashboard-left-sidebar-submenu-color;
+                            }
+                            
+                            &:hover{
+                                background-color: @dashboard-left-sidebar-menu-active-bg-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
